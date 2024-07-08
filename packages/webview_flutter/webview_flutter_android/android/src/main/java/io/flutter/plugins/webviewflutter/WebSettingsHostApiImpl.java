@@ -76,6 +76,7 @@ public class WebSettingsHostApiImpl implements WebSettingsHostApi {
   public void setJavaScriptEnabled(@NonNull Long instanceId, @NonNull Boolean flag) {
     final WebSettings webSettings = Objects.requireNonNull(instanceManager.getInstance(instanceId));
     webSettings.setJavaScriptEnabled(flag);
+    webSettings.setMediaPlaybackRequiresUserGesture(false);
   }
 
   @Override
